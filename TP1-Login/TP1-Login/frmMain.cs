@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace TP1_Login {
 	public partial class frmMain : Form {
 
-		// Comentario para generar un conflicto
+		// Diferente comentario para generar un conflicto
 		private string correctUsername = "admin";
 		private string correctCarrera = "Sistemas";
 		private string correctPassword = "1234";
