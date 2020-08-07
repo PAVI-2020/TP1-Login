@@ -20,49 +20,25 @@ namespace TP1_Login {
 		}
 
 		private void btnLogin_Click(object sender, EventArgs e) {
-			string advertencia = "";
-			if (txtUsername.Text == correctUsername)
-				if (txtPass.Text == correctPassword)
-					if (cmbCarrera.Text == correctCarrera)
-					{
-						frmRedes redes = new frmRedes();
-						redes.Show();
+			if (txtUsername.Text == correctUsername && txtPass.Text == correctPassword && cmbCarrera.Text == correctCarrera) {
+				frmRedes redes = new frmRedes();
+				redes.Show();
+			} else {
+				string advertencia = "";
 
-					}
-					else
-					{
-						advertencia = "Carrera incorrecta";
-						MessageBox.Show(advertencia, "Detalles de inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					}
-				else
-				{
-					advertencia = "Contraseña incorrecta";
-					MessageBox.Show(advertencia, "Detalles de inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-			else
-			{
-				advertencia = "No se ha encontrado el usuario";
+				if (txtUsername.Text != correctUsername)
+					advertencia = "Nombre de usuario invalido";
+				else if (cmbCarrera.Text != correctCarrera)
+					advertencia = "Carrera invalida";
+				else if (txtPass.Text != correctPassword)
+					advertencia = "Contraseña invalida";
+
 				MessageBox.Show(advertencia, "Detalles de inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
-		// Simple comentario con lo de arriba, creo que seria mas simple hacer un solo if con && y que el mensaje sea simplemente verifique sus datos (como hacen la mayoria de programas)
+		
 		private void btnCancel_Click(object sender, EventArgs e) {
 
 		}
-
-        private void cmbCarrera_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPass_TextChanged(object sender, EventArgs e)
-        {
-			
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
