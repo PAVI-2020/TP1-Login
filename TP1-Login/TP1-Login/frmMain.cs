@@ -24,7 +24,9 @@ namespace TP1_Login {
 		private void btnLogin_Click(object sender, EventArgs e) {
 			if (txtUsername.Text == correctUsername && txtPass.Text == correctPassword && cmbCarrera.Text == correctCarrera) {
 				frmRedes redes = new frmRedes();
-				redes.Show();
+				Hide();
+				if (redes.ShowDialog() == DialogResult.Cancel)
+					Close();
 			} else {
 				string advertencia = "";
 
@@ -40,7 +42,12 @@ namespace TP1_Login {
 		}
 		
 		private void btnCancel_Click(object sender, EventArgs e) {
-
+			Close();
 		}
+
+        private void cmbCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

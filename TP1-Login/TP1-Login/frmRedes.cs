@@ -38,5 +38,10 @@ namespace TP1_Login {
 		private void btnWP_Click(object sender, EventArgs e) {
 			Process.Start("https://chat.whatsapp.com/Emkac6ECdv9Ec42XcQujni");
 		}
-	}
+
+        private void btnDiscord_Click(object sender, EventArgs e)
+        {
+			Process.Start("https://discord.gg/3xDubnc");
+        }
+    }
 }
