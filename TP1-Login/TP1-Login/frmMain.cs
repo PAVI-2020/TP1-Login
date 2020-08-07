@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace TP1_Login {
 	public partial class frmMain : Form {
+
+		// Conflicto
 		private string correctUsername = "admin";
 		private string correctCarrera = "Sistemas";
 		private string correctPassword = "1234";
